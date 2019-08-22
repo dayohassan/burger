@@ -1,0 +1,37 @@
+<h2>Burgers for you to Devour!</h2>
+{{!-- list will be to the left --}}
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{burger_name}}
+  {{> burgers/burger-block devoured=1}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that are Devoured!</h2>
+{{!-- list will be to the right --}}
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{burger_name}}
+  {{> burgers/burger-block devoured=0}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form action="/api/burger" method="POST">
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" name="burger_name">
+  </div>
+  <button type="submit">Add Burger</button>
+</form>
+{{!-- <form class="create-form">
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+  <button type="submit">Add Burger</button>
+</form> --}}

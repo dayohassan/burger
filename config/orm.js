@@ -21,8 +21,8 @@ function objToSql(ob) {
 }
 var orm = {
     selectAll: function (tableInput, cb) {
-        var queryString = "SELECT * FROM burgers;";
-        connection.query(queryString, function (err, results) {
+        var queryString = "SELECT * FROM ??;";
+        connection.query(queryString, tableInput, function (err, results) {
             if (err) {
                 throw err;
             }
@@ -60,9 +60,16 @@ var orm = {
             cb(results);
         });
     },
+    deleteOne: function(table, condition, cb){
+        var sql = "DELETE FROM ?? WHERE " + condition;
+        connection.query(sql, [table], function(err, result){
+            if(err) throw err;
+
+            cb(result)
+        })
+    }
 };
 module.exports = orm;
-Collapse
 
 
 
