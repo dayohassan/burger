@@ -1,0 +1,60 @@
+
+:root {
+  /* Define color scheme */
+  --color-background    : rgba(250, 250, 250, 0.84);
+  --color-text          : #371c60;
+  --color-text-highlight: #0275d8;
+}
+
+body {
+  background    : url("../images/burger.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  
+  color         : var(--color-text);
+  font-family   : "Julius Sans One", sans-serif;
+  font-size     : 24px;
+  letter-spacing: 0.05em;
+}
+
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: #cca3a2;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
+  p {
+    border: .8em darkviolet;
+    border-style: dotted double;
+    margin: 1em 0;
+    padding: 1.4em;
+    background: linear-gradient(60deg, red, yellow, red, yellow, red);
+    font: 900 1.2em sans-serif;
+    text-decoration: underline;
+  }
+  
+  .border-box { background-clip: border-box; }
+  .padding-box { background-clip: padding-box; }
+  .content-box { background-clip: content-box; }
+  
+  .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+  }
