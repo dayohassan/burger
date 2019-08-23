@@ -1,3 +1,4 @@
+// Create a connection to run your URL
 var mysql = require("mysql");
 var connection;
 if (process.env.JAWSDB_URL) {

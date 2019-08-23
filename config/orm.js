@@ -1,3 +1,4 @@
+// Create a variable and function to print questions
 var connection = require('./connection');
 function printQuestionMarks(num) {
     var arr = [];
@@ -19,6 +20,7 @@ function objToSql(ob) {
     }
     return arr.toString();
 }
+// Create a table and a callback function
 var orm = {
     selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM ??;";

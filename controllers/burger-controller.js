@@ -1,3 +1,4 @@
+// Create a path and router to run the database functions
 var express = require("express");
 var path = require('path')
 var router = express.Router();

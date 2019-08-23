@@ -1,5 +1,5 @@
 var orm = require('../config/orm');
-
+// Create an orm function for values, colums and callback
 module.exports = {
     all: function(cb){
         orm.selectAll("burgers", cb)
