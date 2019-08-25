@@ -1,4 +1,15 @@
 
-<form action="/api/burger/{{id}}" method="POST">
+{{!-- <form action="/api/burger/{{id}}" method="POST">
     <input type="submit" value="Change" />
-</form>
+</form> --}}
+
+<li>
+	{{burger_name}}
+	{{#if devoured}}
+	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+		devoured it!
+	</button>
+	{{/if}}
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
