@@ -25,18 +25,18 @@ router.post("/api/burger", function(req, res) {
     res.redirect("/")
   });
 });
-// router.post("/api/burger", function(req, res) {
-//   console.log("BC")
-//   burger.create([
-//     "burger_name", "devoured"
-//   ], [
-//     req.body.burger_name, req.body.devoured
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     // res.json({ id: result.insertId });
-//     res.redirect("/")
-//   });
-// });
+router.post("/api/burger", function(req, res) {
+  console.log("BC")
+  burger.create([
+    "burger_name", "devoured"
+  ], [
+    req.body.burger_name, req.body.devoured
+  ], function(result) {
+    // Send back the ID of the new quote
+    // res.json({ id: result.insertId });
+    res.redirect("/")
+  });
+});
 
 router.post("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;

@@ -14,3 +14,5 @@ module.exports = {
         orm.deleteOne("burgers", condition, cb)
     }
 }
+
+  
